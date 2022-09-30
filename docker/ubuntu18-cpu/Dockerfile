@@ -8,7 +8,7 @@ RUN apt-get update \
 
 RUN git clone --depth 1 https://github.com/PaddlePaddle/PaddleSpeech.git /home/PaddleSpeech  
 RUN pip3 uninstall mccabe -y ; exit 0;
-RUN pip3 install multiprocess==0.70.12 importlib-metadata==4.2.0 dill==0.3.4
+RUN pip3 install multiprocess==0.70.12 importlib-metadata==4.2.0 dill==0.3.4 mccabe==0.6 pydantic==1.10.2
 
 WORKDIR /home/PaddleSpeech/
 RUN python setup.py bdist_wheel
